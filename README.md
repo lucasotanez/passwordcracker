@@ -1,2 +1,3 @@
 # passwordcracker
-Slowest brute-force password cracker ever made. (ITP-215 final project)
+Goofy ahhhh ITP-215 final project
+Slowest brute-force password cracker ever made.
