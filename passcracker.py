@@ -20,18 +20,17 @@ def crack(realhash):
     stack = []
     start = time.time()
     while True:
+        temp = ''.join(x)
         for char in possibleChars:
-            temp = ''.join(x)
             calchash = md5((temp + char).encode()).hexdigest()
             if (calchash == realhash):
-                print(f'{(temp+char):10} cracked in {(str((time.time() - start))):10} seconds')
+                print(f'{(temp+char):10} cracked in {str(round(time.time() - start, 4)):4} seconds')
                 return
         if (x == []):
             x.append("a")
             stack.append(0)
             continue
         estack = len(stack) - 1
-        # handle switching last char
         while (x[estack] == "0") and (estack >= 0):
             x[estack] = "a"
             stack[estack] = 0
