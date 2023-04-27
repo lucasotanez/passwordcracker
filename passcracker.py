@@ -32,6 +32,8 @@ def crack(realhash):
     while True:
         temp = ''.join(x)
         for char in possibleChars:
+            # =========== UNCOMMENT THE LINE BELOW TO SEE EACH TESTED PASSWORD IN TERMINAL =========
+            # print(temp + char)
             calchash = md5((temp + char).encode()).hexdigest()
             # exit condition: hash match:
             if (calchash == realhash):
